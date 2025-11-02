@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import Icon from '@/components/ui/icon';
 
@@ -14,26 +14,22 @@ const Index = () => {
     {
       icon: 'CreditCard',
       title: 'Дебетовые карты',
-      description: 'Современные карты с кэшбэком до 10% и бесплатным обслуживанием',
-      gradient: 'from-purple-500 to-pink-500'
+      description: 'Современные карты с кэшбэком до 10% и бесплатным обслуживанием'
     },
     {
       icon: 'PiggyBank',
       title: 'Вклады',
-      description: 'До 18% годовых на срочные депозиты с гибкими условиями',
-      gradient: 'from-blue-500 to-cyan-500'
+      description: 'До 18% годовых на срочные депозиты с гибкими условиями'
     },
     {
       icon: 'TrendingUp',
       title: 'Кредиты',
-      description: 'Моментальное одобрение кредитов от 7.9% годовых',
-      gradient: 'from-orange-500 to-red-500'
+      description: 'Моментальное одобрение кредитов от 7.9% годовых'
     },
     {
       icon: 'Smartphone',
       title: 'Онлайн-банк',
-      description: 'Управляйте финансами в мобильном приложении 24/7',
-      gradient: 'from-green-500 to-emerald-500'
+      description: 'Управляйте финансами в мобильном приложении 24/7'
     }
   ];
 
@@ -45,44 +41,40 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-purple-50 to-blue-50">
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-              <Icon name="Landmark" className="text-white" size={24} />
+    <div className="min-h-screen bg-white">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-border">
+        <div className="container mx-auto px-6 py-6 flex justify-between items-center max-w-7xl">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
+              <Icon name="Landmark" className="text-background" size={18} />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              FinBank
-            </span>
+            <span className="text-xl font-medium tracking-tight">FinBank</span>
           </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</a>
-            <a href="#calculator" className="text-sm font-medium hover:text-primary transition-colors">Калькулятор</a>
-            <a href="#benefits" className="text-sm font-medium hover:text-primary transition-colors">Преимущества</a>
-            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+          <div className="hidden md:flex gap-12 items-center">
+            <a href="#services" className="text-sm font-light hover:text-foreground/60 transition-colors">Услуги</a>
+            <a href="#calculator" className="text-sm font-light hover:text-foreground/60 transition-colors">Калькулятор</a>
+            <a href="#benefits" className="text-sm font-light hover:text-foreground/60 transition-colors">Преимущества</a>
+            <Button size="sm" variant="outline" className="rounded-sm font-light">
               Войти
             </Button>
           </div>
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-600 to-secondary bg-clip-text text-transparent leading-tight">
-              Банк нового поколения
+      <section className="pt-48 pb-32 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-8">
+            <h1 className="text-6xl md:text-8xl font-light tracking-tight leading-none">
+              Банк нового<br />поколения
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground font-light max-w-xl mx-auto leading-relaxed">
               Современные финансовые решения для вашего бизнеса и личных целей
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg px-8 py-6 transition-all hover:scale-105">
-                <Icon name="Rocket" className="mr-2" size={20} />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+              <Button size="lg" className="rounded-sm font-light px-12 py-6 text-base">
                 Открыть счёт
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 hover:border-primary transition-all hover:scale-105">
-                <Icon name="PlayCircle" className="mr-2" size={20} />
+              <Button size="lg" variant="outline" className="rounded-sm font-light px-12 py-6 text-base">
                 Узнать больше
               </Button>
             </div>
@@ -90,49 +82,45 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="py-32 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-slide-up">
+          <h2 className="text-4xl md:text-5xl font-light text-center mb-24 tracking-tight">
             Наши услуги
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-16">
             {services.map((service, index) => (
-              <Card 
+              <div 
                 key={index} 
-                className="border-none shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden group animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="space-y-6 group"
               >
-                <div className={`h-2 bg-gradient-to-r ${service.gradient}`}></div>
-                <CardHeader>
-                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                    <Icon name={service.icon as any} className="text-white" size={28} />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-base">{service.description}</CardDescription>
-                </CardHeader>
-              </Card>
+                <Icon name={service.icon as any} className="text-foreground" size={32} strokeWidth={1} />
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-normal tracking-tight">{service.title}</h3>
+                  <p className="text-base text-muted-foreground font-light leading-relaxed">{service.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="calculator" className="py-20 px-4 bg-white/50">
-        <div className="container mx-auto max-w-4xl">
-          <Card className="shadow-2xl border-none overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-primary to-secondary"></div>
-            <CardHeader className="text-center pb-8">
-              <CardTitle className="text-3xl md:text-4xl font-bold mb-2">
-                Калькулятор кредита
-              </CardTitle>
-              <CardDescription className="text-lg">
-                Рассчитайте ежемесячный платёж за несколько секунд
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-8 pb-8">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <label className="text-lg font-semibold">Сумма кредита</label>
-                  <span className="text-2xl font-bold text-primary">
+      <section id="calculator" className="py-32 px-6">
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light mb-6 tracking-tight">
+              Калькулятор кредита
+            </h2>
+            <p className="text-base text-muted-foreground font-light">
+              Рассчитайте ежемесячный платёж за несколько секунд
+            </p>
+          </div>
+          
+          <Card className="border rounded-sm p-12">
+            <CardContent className="space-y-16 p-0">
+              <div className="space-y-6">
+                <div className="flex justify-between items-baseline">
+                  <label className="text-sm font-light text-muted-foreground">Сумма кредита</label>
+                  <span className="text-3xl font-light tracking-tight">
                     {loanAmount[0].toLocaleString('ru-RU')} ₽
                   </span>
                 </div>
@@ -142,14 +130,13 @@ const Index = () => {
                   min={100000}
                   max={5000000}
                   step={50000}
-                  className="cursor-pointer"
                 />
               </div>
 
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <label className="text-lg font-semibold">Срок кредита</label>
-                  <span className="text-2xl font-bold text-secondary">
+              <div className="space-y-6">
+                <div className="flex justify-between items-baseline">
+                  <label className="text-sm font-light text-muted-foreground">Срок кредита</label>
+                  <span className="text-3xl font-light tracking-tight">
                     {loanTerm[0]} {loanTerm[0] === 1 ? 'месяц' : loanTerm[0] < 5 ? 'месяца' : 'месяцев'}
                   </span>
                 </div>
@@ -159,20 +146,18 @@ const Index = () => {
                   min={3}
                   max={60}
                   step={3}
-                  className="cursor-pointer"
                 />
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 text-center mt-8">
-                <p className="text-sm text-muted-foreground mb-2">Ежемесячный платёж</p>
-                <p className="text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <div className="border-t pt-16 text-center space-y-4">
+                <p className="text-xs font-light text-muted-foreground tracking-wider uppercase">Ежемесячный платёж</p>
+                <p className="text-6xl font-light tracking-tight">
                   {monthlyPayment.toLocaleString('ru-RU', { maximumFractionDigits: 0 })} ₽
                 </p>
-                <p className="text-sm text-muted-foreground mt-4">Ставка 15% годовых</p>
+                <p className="text-sm font-light text-muted-foreground">Ставка 15% годовых</p>
               </div>
 
-              <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg py-6 mt-4">
-                <Icon name="Send" className="mr-2" size={20} />
+              <Button className="w-full rounded-sm font-light text-base py-6">
                 Оформить кредит
               </Button>
             </CardContent>
@@ -180,69 +165,66 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="benefits" className="py-20 px-4">
+      <section id="benefits" className="py-32 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-light text-center mb-24 tracking-tight">
             Почему выбирают нас
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-16">
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="flex flex-col items-center text-center group animate-fade-in"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className="flex flex-col items-center text-center space-y-6"
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <Icon name={benefit.icon as any} className="text-white" size={32} />
-                </div>
-                <p className="text-lg font-semibold">{benefit.text}</p>
+                <Icon name={benefit.icon as any} className="text-foreground" size={32} strokeWidth={1} />
+                <p className="text-base font-light">{benefit.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-4">
+      <footer className="bg-foreground text-background py-20 px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                  <Icon name="Landmark" className="text-white" size={24} />
+          <div className="grid md:grid-cols-4 gap-16 mb-20">
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 bg-background rounded-sm flex items-center justify-center">
+                  <Icon name="Landmark" className="text-foreground" size={18} />
                 </div>
-                <span className="text-2xl font-bold">FinBank</span>
+                <span className="text-xl font-medium">FinBank</span>
               </div>
-              <p className="text-gray-400">Банк нового поколения</p>
+              <p className="text-background/60 font-light text-sm">Банк нового поколения</p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Услуги</h3>
-              <ul className="space-y-2 text-gray-400">
+            <div className="space-y-4">
+              <h3 className="font-medium mb-6 text-sm">Услуги</h3>
+              <ul className="space-y-3 text-background/60 font-light text-sm">
                 <li>Карты</li>
                 <li>Вклады</li>
                 <li>Кредиты</li>
                 <li>Инвестиции</li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Компания</h3>
-              <ul className="space-y-2 text-gray-400">
+            <div className="space-y-4">
+              <h3 className="font-medium mb-6 text-sm">Компания</h3>
+              <ul className="space-y-3 text-background/60 font-light text-sm">
                 <li>О нас</li>
                 <li>Карьера</li>
                 <li>Новости</li>
                 <li>Контакты</li>
               </ul>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-lg">Поддержка</h3>
-              <ul className="space-y-2 text-gray-400">
+            <div className="space-y-4">
+              <h3 className="font-medium mb-6 text-sm">Поддержка</h3>
+              <ul className="space-y-3 text-background/60 font-light text-sm">
                 <li>8 800 555-35-35</li>
                 <li>support@finbank.ru</li>
                 <li>Чат 24/7</li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p>© 2024 FinBank. Все права защищены.</p>
+          <div className="border-t border-background/10 pt-8 text-center text-background/40 text-sm font-light">
+            <p>© 2024 FinBank</p>
           </div>
         </div>
       </footer>
