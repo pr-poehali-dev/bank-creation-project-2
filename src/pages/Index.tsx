@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Slider } from '@/components/ui/slider';
 import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [loanAmount, setLoanAmount] = useState([1000000]);
@@ -44,19 +45,21 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-border">
         <div className="container mx-auto px-6 py-6 flex justify-between items-center max-w-7xl">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className="w-8 h-8 bg-foreground rounded-sm flex items-center justify-center">
               <Icon name="Landmark" className="text-background" size={18} />
             </div>
             <span className="text-xl font-medium tracking-tight">FinBank</span>
-          </div>
-          <div className="hidden md:flex gap-12 items-center">
-            <a href="#services" className="text-sm font-light hover:text-foreground/60 transition-colors">Услуги</a>
-            <a href="#calculator" className="text-sm font-light hover:text-foreground/60 transition-colors">Калькулятор</a>
-            <a href="#benefits" className="text-sm font-light hover:text-foreground/60 transition-colors">Преимущества</a>
-            <Button size="sm" variant="outline" className="rounded-sm font-light">
-              Войти
-            </Button>
+          </Link>
+          <div className="hidden md:flex gap-8 items-center">
+            <Link to="/" className="text-sm font-medium">Главная</Link>
+            <Link to="/credits" className="text-sm font-light hover:text-foreground/60 transition-colors">Кредиты</Link>
+            <Link to="/deposits" className="text-sm font-light hover:text-foreground/60 transition-colors">Вклады</Link>
+            <Link to="/cards" className="text-sm font-light hover:text-foreground/60 transition-colors">Карты</Link>
+            <Link to="/mortgage" className="text-sm font-light hover:text-foreground/60 transition-colors">Ипотека</Link>
+            <Link to="/investments" className="text-sm font-light hover:text-foreground/60 transition-colors">Инвестиции</Link>
+            <Link to="/insurance" className="text-sm font-light hover:text-foreground/60 transition-colors">Страхование</Link>
+            <Link to="/contacts" className="text-sm font-light hover:text-foreground/60 transition-colors">Контакты</Link>
           </div>
         </div>
       </nav>
